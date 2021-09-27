@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titulo</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/adcd08db79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Titulo</title>
-  <link rel="stylesheet" href="./assets/css/main.css" />
-</head>
-
-<body>
-  <main>
-    <h1 class="title">Tira tus dados</h1>
-    <p class= "js_paragraphd100"></p>
-    <select name="dices" id="dicesd100" class="js_selectd100">
-      <option value="0">¿Cuantos dados vas a tirar?</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <!-- <option value=""><input type="number"></option> -->
-    </select>
-      <button class="js_buttond100 button" id="d100">D100</button>
-      <p class="js_paragraphd20"></p>
-      <select name="dices" id="dicesd20" class="js_selectd20">
-        <option value="0">¿Cuantos dados vas a tirar?</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <!-- <option value=""><input type="number"></option> -->
-      </select>
-      <button class="js_buttond20 button" id="d20">D20</button>
-      <p class="js_paragraphd12"></p>
-      <button class="js_buttond12 button" id="d12">D12</button>
-      <p class="js_paragraphd10"></p>
-      <button class="js_buttond10 button" id="d10">D10</button>
-      <p class="js_paragraphd8"></p>
-      <button class="js_buttond8 button" id="d8">D8</button>
-      <p class="js_paragraphd6"></p>
-      <button class="js_buttond6 button" id="d6">D6</button>
-      <p class="js_paragraphd4"></p>
-      <button class="js_buttond4 button" id="d4">D4</button>
-  </main>
-<script src="./assets/js/main.js"></script>
-</body>
-
+  <body>
+    <main>
+      <h1 class="title">Tira tus dados</h1>
+      <ul>
+        <li >
+          <i class="fas fa-dice-d20" id="d100" class="js_liDice"></i>
+          <p class="js_paragraphd100" ></p>
+          <select name="dices" id="dicesd100" class="js_selectd100">
+            <option value="0">¿Cuantos dados vas a tirar?</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <!-- <option value=""><input type="number"></option> -->
+          </select>
+        </li>
+        <li >
+          <i class="fas fa-dice-d20" id="d20" class="js_liDice"></i>
+          <p class="js_paragraphd20"></p>
+          <select name="dices" id="dicesd20" class="js_selectd20">
+            <option value="0">¿Cuantos dados vas a tirar?</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <!-- <option value=""><input type="number"></option> -->
+          </select>
+        </li>
+        <li >
+          <i class="fas fa-dice-d20" id="d12" class="js_liDice"></i>
+          <p class="js_paragraphd12"></p>
+        </li>
+        <li >
+          <i class="fas fa-dice-d20" id="d10" class="js_liDice"></i>
+          <p class="js_paragraphd10"></p>
+        </li>
+        <li >
+          <i class="fas fa-dice-d20" id="d8" class="js_liDice" ></i>
+          <p class="js_paragraphd8"></p>
+        </li>
+        <li >
+          <i class="fas fa-dice-six" id="d6" class="js_liDice"></i>
+          <p class="js_paragraphd6"></p>
+        </li>
+        <li >
+          <i class="fas fa-dice-d20" id="d4" class="js_liDice"></i>
+          <p class="js_paragraphd4"></p>
+        </li>
+      </ul>
+      <button class="js_button">Tira!</button>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
