@@ -36,7 +36,7 @@ function handleRoll(ev) {
     paragraphd100.innerHTML = getRandomNumber(100) * selectValued100;
   } else if (id === 'd20') {
     const paragraphd20 = document.querySelector('.js_paragraphd20');
-    paragraphd20.innerHTML = getRandomNumber(20) * selectValued20;
+    paragraphd20.innerHTML = selectValued20 * (getRandomNumber(20));
   } else if (id === 'd12') {
     const paragraphd12 = document.querySelector('.js_paragraphd12');
     paragraphd12.innerHTML = getRandomNumber(12);

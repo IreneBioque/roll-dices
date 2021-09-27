@@ -1,124 +1,126 @@
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+# Sobre mi 😊👩‍💻
 
-# Adalab web starter kit
+Me llamo Irene Bioque y soy estudiante de **Adalab** [Github](https://github.com/Adalab). Este proyecto, es uno de mis proyectos personales, combinando dos pasiones, la programación y el rol. 
 
-Ahoy! Este es nuestro Starter Kit creado en **node y gulp**. ¿Y qué es un Starter kit? Pues es una **plantilla de proyecto con funcionalidades preinstaladas y preconfiguradas**.
+My name is Irene Bioque and I'm a student of **Adalab** [Github](https://github.com/Adalab). This project is one of my personal projects, combining two passions, programming and role playing.
 
-Este Kit incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local y muchas cosas más. El Kit nos ayuda a trabajar más cómodamente, nos automatiza tareas.
+# Proyecto personal roll dice
 
-En el Kit hay 3 tipos de ficheros y carpetas:
+Este proyecto consiste en una aplicación para que puedas tirar dados en cualquier lugar mientras juegas a tus partidas de rol.
 
-- Los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json... Son la configuración del proyecto y no necesitamos modificarlos.
-- La carpeta `src/`: son los ficheros de nuestra página web, como HTML, CSS, JS...
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando arrancamos el proyecto. El Kit lee los ficheros que hay dentro de `src/`, los procesa y los genera dentro de `public/` y `docs/`.
+This project consists of an application so that you can roll dice anywhere while playing your role-playing games.
 
-## Guía de inicio rápido
+## Comenzando 🚀 / Starting 🚀
 
-> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
+Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas.
 
-### Pasos a seguir cada vez que queremos arrancar un proyecto desde cero:
+These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes.
 
-1. **Crea tu propio repositorio.**
-1. Descarga este **Starter kit desde GitHub**.
-   - No recomendamos que clones este repo ya que no podrás añadir commits.
-1. **Copia todos los ficheros** de este Starter kit en la carpeta raíz de tu repositorio.
-   - Recuerda que debes copiar **también los ficheros ocultos**.
-   - Si has decidido clonar este repo, no debes copiar la carpeta `.git`. Si lo haces estarás machacando tu propio repositorio.
-1. **Abre una terminal** en la carpeta raíz de tu repositorio.
-1. **Instala las dependencias** locales ejecutando en la terminal el comando:
+### Pre-requisitos 📋 / Prerequisites 📋
 
-```bash
+¿Que necesitas para instalar el software?
+
+```
+Necesitas tener instalado Node JS
+```
+
+What do you need to install the software?
+
+```
+You need to have installed Node JS
+```
+
+### Instalación 🔧 / Installation 🔧
+
+1. Descargar este repositorio en zip o clonar el repositorio en tu dispositivo (si clonas el repositorio, ten en cuenta de que no podrás añador tus commits)
+2. Abre una terminal en la carpeta raíz de tu repositorio
+3. Instala las dependencias locales ejecutando en la terminal el comando:
+
+```
 npm install
 ```
 
-### Pasos para arrancar el proyecto:
+1. Download this repository in zip or clone the repository on your device (if you clone the repository, note that you will not be able to add your commits).
+2. Open a terminal in the root folder of your repository.
+3. Install the local dependencies by running the command in the terminal:
 
-Una vez hemos instalado las dependencias, vamos a arrancar el proyecto. **El proyecto hay que arrancarlo cada vez que te pongas a programar.** Para ello ejecuta el comando:
+```
+npm install
+```
 
-```bash
+### Arrancar el proyecto ⚙️ / Starting the project ⚙️
+
+Una vez hecho el paso anterior, **hay que arrancar el proyecto cada vez que programes**. Para ello, ejecuta el comando:
+
+```
 npm start
 ```
 
-Este comando:
+A continuación puedes observar que:
 
-- **Abre una ventana de Chrome y muestra tu página web**, al igual que hace el plugin de VS Code Live Server (Go live).
-- También **observa** todos los ficheros que hay dentro de la carpeta `src/`, para que cada vez que modifiques un fichero **refresca tu página en Chrome**.
-- También **procesa los ficheros** HTML, SASS / CSS y JS y los **genera y guarda en la carpeta `public/`**. Por ejemplo:
-   - Convierte los ficheros SASS en CSS.
-   - Combina los diferentes ficheros de HTML y los agrupa en uno o varios ficheros HTML.
+- Se abrirá una ventana en tu navegador pretederminado, que mostrará tu web.
+- Los ficheros sobre lo que trabajarás estan dentro de la carpeta `src/`
 
-Después de ejecutar `npm start` ya puedes empezar a editar todos los ficheros que están dentro de la carpeta `src/` y programar cómodamente.
+Once you have done the previous step, **start the project every time you program**. To do this, run the command:
 
-### Pasos para publicar el proyecto en GitHub Pages:
+```
+npm start
+```
 
-Para generar tu página para producción ejecuta el comando:
+Then you can see that:
 
-```bash
+- A window will open in your pre-finished browser, which will display your website.
+- The files you will be working on are inside the `src/` folder.
+
+### Publicar el proyecto en GitHub Pages 📚 / Publish the project on GitHub Pages 📚
+
+Introducir el comando
+
+```
 npm run docs
 ```
 
 Y a continuación:
 
-1. Sube a tu repo la carpeta `docs/` que se te acaba de generar.
-1. Entra en la pestaña `settings` de tu repo.
-1. Y en el apartado de GitHub Pages activa la opción **master branch /docs folder**.
-1. Y ya estaría!!!
+1.  Sube tu repo a la carpeta `docs/` que se te acaba de generar
+2.  Entra en la pestaña settings de tu repositorio
+3.  En el apartado de GitHub Pages activa la opción **master branch/docs folder**
 
-Además, los comandos:
-
-```bash
-npm run push-docs
-```
-o
-
-```bash
-npm run deploy
-```
-
-son un atajo que nos genera la versión de producción y hace push de la carpeta `docs/` del tirón. Te recomendamos ver el fichero `package.json` para aprender cómo funciona.
-
-## Flujo de archivos con Gulp
-
-Estas tareas de Gulp producen el siguiente flujo de archivos:
-
-![Gulp flow](./gulp-flow.png)
-
-## `gulpfile.js` y `config.json`
-
-Nuestro **gulpfile.js** usa el fichero `config.json` de configuración con las rutas de los archivos a generar / observar.
-
-De esta manera separarmos las acciones que están en `gulpfile.js` de la configuración de las acciones que están en `config.json`.
-
-## Estructura de carpetas
-
-La estructura de carpetas tiene esta pinta:
+Enter the command
 
 ```
-src
- ├─ api // los ficheros de esta carpeta se copian en public/api/
- |  └─ data.json
- ├─ images
- |  └─ logo.jpg
- ├─ js // los ficheros de esta carpeta se concatenan en el fichero main.js y este se guarda en public/main.js
- |  ├─ main.js
- |  └─ events.js
- ├─ scss
- |  ├─ components
- |  ├─ core
- |  ├─ layout
- |  └─ pages
- └─ html
-    └─ partials
+npm run docs
 ```
 
-> **NOTA:** Los partials de HTML y SASS del proyecto son orientativos. Te recomendamos usar los que quieras, y borrar los que no uses.
+And then:
 
-## Vídeotutoriales del Starter kit
+1. Upload your repo to the docs/ folder that was just generated for you.
+2. Go to the settings tab of your repo
+3. In the GitHub Pages section activate the **master branch/docs folder** option.
 
-- [Qué es, trabajar con la versión de desarrollo y rutas relativas](https://www.youtube.com/watch?v=XwvhXvBijos)
-- [Migración de un proyecto, trabajar con la versión de producción y GitHub Pages](https://www.youtube.com/watch?v=qqGClcgt9Uc)
-- [Motor de plantillas](https://www.youtube.com/watch?v=4GwXOJ045Zg)
+## Construido con 🛠️ / Built with 🛠️
 
-## Falta algo?
+- Adalab-web-starter-kit
+- HTML
+- SASS
+- GULP
+- JavaScript
 
-Echas de menos que el kit haga algo en concreto? Pidelo sin problema a través de las issues o si te animas a mejorarlo mándanos un PR :)
+## Autores ✒️ / Authors ✒️
+
+- **Irene Bioque** [Github](https://github.com/IreneBioque)
+
+## Colaboradores 🖊️ / Partners 🖊️
+
+- **Adalab** -**Realización de Adalab Starter Kit** [Github](https://github.com/Adalab)
+
+## Licencia 📄 / Licence 📄
+
+Este proyecto está bajo la Licencia MIT License mira el archivo [LICENSE](LICENSE) para más detalles
+
+This project is licensed under the MIT License MIT License see the [LICENSE](LICENSE) file for more details.
+
+## Gracias 🎁 / Thanks 🎁
+
+- Gracias a las compañeras y profesores de Adalab 🍺
+- Thanks to the colleagues and teachers of Adalab 🍺
