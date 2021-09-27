@@ -1,5 +1,5 @@
 
-# Proyecto personal roll dice
+# Proyecto personal roll dices
 
 Este proyecto consiste en una aplicación para que puedas tirar dados en cualquier lugar mientras juegas a tus partidas de rol.
 
