@@ -1,14 +1,15 @@
-# Sobre mi 😊👩‍💻
-
-Me llamo Irene Bioque y soy estudiante de **Adalab** [Github](https://github.com/Adalab). Este proyecto, es uno de mis proyectos personales, combinando dos pasiones, la programación y el rol. 
-
-My name is Irene Bioque and I'm a student of **Adalab** [Github](https://github.com/Adalab). This project is one of my personal projects, combining two passions, programming and role playing.
 
 # Proyecto personal roll dice
 
 Este proyecto consiste en una aplicación para que puedas tirar dados en cualquier lugar mientras juegas a tus partidas de rol.
 
 This project consists of an application so that you can roll dice anywhere while playing your role-playing games.
+
+## Sobre mi 😊👩‍💻
+
+Me llamo Irene Bioque y soy estudiante de **Adalab** [Github](https://github.com/Adalab). Este proyecto, es uno de mis proyectos personales, combinando dos pasiones, la programación y el rol. 
+
+My name is Irene Bioque and I'm a student of **Adalab** [Github](https://github.com/Adalab). This project is one of my personal projects, combining two passions, programming and role playing.
 
 ## Comenzando 🚀 / Starting 🚀
 
