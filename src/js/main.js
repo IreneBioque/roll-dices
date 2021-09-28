@@ -8,12 +8,11 @@ function getRandomNumber(max) {
 }
 
 function handleRoll(number, faces) {
-  let arrayTirada = [];
+  let diceArray = [];
   for (let i = 0; i < number; i++) {
-    arrayTirada.push(getRandomNumber(faces));
-    console.log(arrayTirada);
+    diceArray.push(getRandomNumber(faces));
   }
-  return arrayTirada;
+  return diceArray;
 }
 
 
