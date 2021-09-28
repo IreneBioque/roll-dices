@@ -1,7 +1,27 @@
 'use strict';
-let showResults = document.querySelector('.js_results');
+const showResults = document.querySelector('.js_results');
 const button = document.querySelector('.js_button');
+const save = document.querySelector('.js_save');
+const liElement = document.querySelectorAll('.js_liDice');
+// const buttonSave = document.querySelector('.js_buttonSave');
 
+for (const element of liElement) {
+  element.addEventListener('click', handleSelect);
+}
+
+function handleSelect(ev) {
+  save.innerHTML = '';
+  const id = ev.currentTarget.id;
+  console.log(ev.currentTarget.id);
+  if (id === '100') {
+    const html = ` <h3>Tirada guardada</h3> <li > <label for=""> 
+            <i class="fas fa-dice-d20 js_liDice" id=${id} ></i>
+            <input class="js_inputd100" type="number" name="" id="inputd100" value=2 />
+          </label>
+        </li>`;
+    save.innerHTML += html;
+  }
+}
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
@@ -15,9 +35,7 @@ function handleRoll(number, faces) {
   return diceArray;
 }
 
-
 function handleRolld100() {
-
   let valueInput = document.querySelector('#inputd100').value;
   if (valueInput !== '') {
     const resultsAll = handleRoll(valueInput, 100);
@@ -85,7 +103,7 @@ function handleRolld8() {
   }
 }
 
-function handleRolld6 (){
+function handleRolld6() {
   let valueInput = document.querySelector('#inputd6').value;
   if (valueInput !== '') {
     const resultsAll = handleRoll(valueInput, 6);
@@ -111,8 +129,9 @@ function handleRolld4() {
     showResults.appendChild(resultsd4);
   }
 }
-function renderRoll() {
+function renderRoll(ev) {
   showResults.innerHTML = '';
+  ev.preventDefault();
   handleRolld100();
   handleRolld20();
   handleRolld12();
