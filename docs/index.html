@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titulo</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/adcd08db79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Titulo</title>
-  <link rel="stylesheet" href="./assets/css/main.css" />
-</head>
-
-<body>
-  <main>
-    <h1 class="title">Tira tus dados</h1>
-    <p class= "js_paragraphd100"></p>
-    <select name="dices" id="dicesd100" class="js_selectd100">
-      <option value="0">¿Cuantos dados vas a tirar?</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <!-- <option value=""><input type="number"></option> -->
-    </select>
-      <button class="js_buttond100 button" id="d100">D100</button>
-      <p class="js_paragraphd20"></p>
-      <select name="dices" id="dicesd20" class="js_selectd20">
-        <option value="0">¿Cuantos dados vas a tirar?</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <!-- <option value=""><input type="number"></option> -->
-      </select>
-      <button class="js_buttond20 button" id="d20">D20</button>
-      <p class="js_paragraphd12"></p>
-      <button class="js_buttond12 button" id="d12">D12</button>
-      <p class="js_paragraphd10"></p>
-      <button class="js_buttond10 button" id="d10">D10</button>
-      <p class="js_paragraphd8"></p>
-      <button class="js_buttond8 button" id="d8">D8</button>
-      <p class="js_paragraphd6"></p>
-      <button class="js_buttond6 button" id="d6">D6</button>
-      <p class="js_paragraphd4"></p>
-      <button class="js_buttond4 button" id="d4">D4</button>
-  </main>
-<script src="./assets/js/main.js"></script>
-</body>
-
+  <body>
+    <main>
+      <h1 class="title">Tira tus dados</h1>
+      <ul>
+        <li id="100" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd100" placeholder="¿Cuantos dados vas a tirar?" />
+          </label>
+        </li>
+        <li id="20" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd20" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+        <li id="12" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd12" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+        <li id="10" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd10" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+        <li id="8" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd8" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+        <li id="6" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-six"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd6" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+        <li id="4" class="js_liDice">
+          <label for="">
+            <i class="fas fa-dice-d20"></i>
+            <input class="js_inputd100" type="number" name="" id="inputd4" placeholder="¿Cuantos dados vas a tirar?"/>
+          </label>
+        </li>
+      </ul>
+      <button class="js_button">Roll the dice!</button>
+      <p class="js_results"></p>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
