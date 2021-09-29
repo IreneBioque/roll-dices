@@ -143,6 +143,32 @@ function renderRoll(ev) {
 
 button.addEventListener('click', renderRoll);
 
+const select = [
+  {
+    name: '',
+    value: '',
+    id: '',
+  }
+];
+console.log(select);
+
+const inputsSave = document.querySelectorAll('.js_inputsave');
+
+for (const inputSave of inputsSave) {
+  inputSave.addEventListener('change', handleInputSave);
+}
+function handleInputSave(ev) {
+  const nameSave = document.querySelector('.js_nameSave');
+  console.log(ev.currentTarget.value);
+  select.push([
+    {
+      name: nameSave.value,
+      id: ev.currentTarget.id,
+      value: ev.currentTarget.value,
+    }
+  ]);
+  console.log(select);
+}
 
 function handleSelectSave() {
   save.classList.toggle('hidden');
