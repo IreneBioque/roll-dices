@@ -16,57 +16,187 @@
     <main>
       <h1 class="title">Tira tus dados</h1>
       <form action="">
-      <ul>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice" id="100" ></i>
-            <input class="js_inputd100" type="number" name="" id="inputd100" placeholder="¿Cuantos dados vas a tirar?" />
-          </label>
-        </li>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice"id="20"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd20" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice" id="12"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd12" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice" id="10"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd10" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-        <li  >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice"id="8"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd8" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-six js_liDice"id="6"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd6" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-        <li >
-          <label for="">
-            <i class="fas fa-dice-d20 js_liDice"id="4"></i>
-            <input class="js_inputd100" type="number" name="" id="inputd4" placeholder="¿Cuantos dados vas a tirar?"/>
-          </label>
-        </li>
-      </ul>
-      <button class="js_button">Roll the dice!</button>
-      <p class="js_results"></p>
+        <ul>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd100"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd20"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd12"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd10"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd8"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-six js_liDice" id="6"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd6"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+              <input
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd4"
+                placeholder="¿Cuantos dados vas a tirar?"
+              />
+            </label>
+          </li>
+        </ul>
+        <button class="js_button">Roll the dice!</button>
+        <p class="js_results"></p>
       </form>
       <section>
         <h2>Guardar tiradas</h2>
-        <div class="js_save"></div>
-        <button class="js_buttonSave">Roll the favourites dices!</button>
+        <button class="js_buttonSave">Abrir guardar tirada</button>
+        <div class="js_save hidden">
+          <ul class="js_savelist">
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+                <input
+                  class="js_inputd100save"
+                  type="number"
+                  name=""
+                  id="inputd100save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+                <input
+                  class="js_inputd20save"
+                  type="number"
+                  name=""
+                  id="inputd20save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+                <input
+                  class="js_inputd12save"
+                  type="number"
+                  name=""
+                  id="inputd12save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+                <input
+                  class="js_inputd10save"
+                  type="number"
+                  name=""
+                  id="inputd10save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+                <input
+                  class="js_inputd8save"
+                  type="number"
+                  name=""
+                  id="inputd8save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-six js_liDice" id="6"></i>
+                <input
+                  class="js_inputd6save"
+                  type="number"
+                  name=""
+                  id="inputd6save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+                <input
+                  class="js_inputd4save"
+                  type="number"
+                  name=""
+                  id="inputd4save"
+                  placeholder="¿Cuantos dados vas a tirar?"
+                />
+              </label>
+            </li>
+          </ul>
+          <button class="js_savebutton">Guardar</button>
+        </div>
       </section>
     </main>
     <script src="./assets/js/main.js"></script>

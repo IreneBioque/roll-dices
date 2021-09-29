@@ -2,26 +2,26 @@
 const showResults = document.querySelector('.js_results');
 const button = document.querySelector('.js_button');
 const save = document.querySelector('.js_save');
-const liElement = document.querySelectorAll('.js_liDice');
-// const buttonSave = document.querySelector('.js_buttonSave');
+// const liElement = document.querySelectorAll('.js_liDice');
+const buttonSave = document.querySelector('.js_buttonSave');
 
-for (const element of liElement) {
-  element.addEventListener('click', handleSelect);
-}
+// for (const element of liElement) {
+//   element.addEventListener('click', handleSelect);
+// }
 
-function handleSelect(ev) {
-  save.innerHTML = '';
-  const id = ev.currentTarget.id;
-  console.log(ev.currentTarget.id);
-  if (id === '100') {
-    const html = ` <h3>Tirada guardada</h3> <li > <label for=""> 
-            <i class="fas fa-dice-d20 js_liDice" id=${id} ></i>
-            <input class="js_inputd100" type="number" name="" id="inputd100" value=2 />
-          </label>
-        </li>`;
-    save.innerHTML += html;
-  }
-}
+// function handleSelect(ev) {
+//   save.innerHTML = '';
+//   const id = ev.currentTarget.id;
+//   console.log(ev.currentTarget.id);
+//   if (id === '100') {
+//     const html = ` <h3>Tirada guardada</h3> <li > <label for="">
+//             <i class="fas fa-dice-d20 js_liDice" id=${id} ></i>
+//             <input class="js_inputd100" type="number" name="" id="inputd100" value=2 />
+//           </label>
+//         </li>`;
+//     save.innerHTML += html;
+//   }
+// }
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
@@ -43,7 +43,7 @@ function handleRolld100() {
     let suma = 0;
     for (const result of resultsAll) {
       suma += parseInt(result);
-      resultsd100.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd100.innerHTML = `Tiraste ${valueInput} dados d100, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd100);
   }
@@ -57,7 +57,7 @@ function handleRolld20() {
     let suma = 0;
     for (const result of resultsAll) {
       suma += parseInt(result);
-      resultsd20.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd20.innerHTML = `Tiraste ${valueInput} dados d20, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd20);
   }
@@ -70,7 +70,7 @@ function handleRolld12() {
     let suma = 0;
     for (const result of resultsAll) {
       suma += parseInt(result);
-      resultsd12.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd12.innerHTML = `Tiraste ${valueInput} dados d12, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd12);
   }
@@ -84,7 +84,7 @@ function handleRolld10() {
     let suma = 0;
     for (const result of resultsAll) {
       suma += parseInt(result);
-      resultsd10.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd10.innerHTML = `Tiraste ${valueInput} dados d10, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd10);
   }
@@ -97,7 +97,7 @@ function handleRolld8() {
     let suma = 0;
     for (const result of resultsAll) {
       suma += parseInt(result);
-      resultsd8.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd8.innerHTML = `Tiraste ${valueInput} dados d8, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd8);
   }
@@ -111,7 +111,7 @@ function handleRolld6() {
     let suma = 0;
     for (let i = 0; i < resultsAll.length; i++) {
       suma += parseInt(resultsAll[i]);
-      resultsd6.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd6.innerHTML = `Tiraste ${valueInput} dados d6, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd6);
   }
@@ -124,7 +124,7 @@ function handleRolld4() {
     let suma = 0;
     for (let i = 0; i < resultsAll.length; i++) {
       suma += parseInt(resultsAll[i]);
-      resultsd4.innerHTML = `Tiraste ${valueInput} dados, los resultados son ${resultsAll} El total es ${suma} `;
+      resultsd4.innerHTML = `Tiraste ${valueInput} dados d4, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd4);
   }
@@ -142,3 +142,9 @@ function renderRoll(ev) {
 }
 
 button.addEventListener('click', renderRoll);
+
+
+function handleSelectSave() {
+  save.classList.toggle('hidden');
+}
+buttonSave.addEventListener('click', handleSelectSave);
