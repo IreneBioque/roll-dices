@@ -170,66 +170,43 @@ for (const buttonR of buttonRest) {
 }
 
 
-let counterd100 = 0;
-let counterd20 = 0;
-let counterd12 = 0;
-let counterd10 = 0;
-let counterd8 = 0;
-let counterd6 = 0;
-let counterd4 = 0;
-
-
-
 function incrementar(ev) {
   ev.preventDefault();
   const id = ev.currentTarget.id;
   if (id === 'buttonplusd100') {
-    counterd100 = counterd100 + 1;
-    valueInputd100.value = counterd100;
+    valueInputd100.value =  parseInt(valueInputd100.value) + 1;
   } else if (id === 'buttonplusd20') {
-    counterd20 = counterd20 + 1;
-    valueInputd20.value = counterd20;
+    valueInputd20.value = parseInt(valueInputd20.value) + 1;
   } else if (id === 'buttonplusd12') {
-    counterd12 = counterd12 + 1;
-    valueInputd12.value = counterd12;
+    valueInputd12.value = parseInt(valueInputd12.value) + 1;
   } else if (id === 'buttonplusd10') {
-    counterd10 = counterd10 + 1;
-    valueInputd10.value = counterd10;
+    valueInputd10.value = parseInt(valueInputd10.value) + 1;
   } else if (id === 'buttonplusd8') {
-    counterd8 = counterd8 + 1;
-    valueInputd8.value = counterd8;
+    valueInputd8.value = parseInt(valueInputd8.value) + 1;
   } else if (id === 'buttonplusd6') {
-    counterd6 = counterd6 + 1;
-    valueInputd6.value = counterd6;
+
+    valueInputd6.value = parseInt(valueInputd6.value) + 1;
   } else {
-    counterd4 = counterd4 + 1;
-    valueInputd4.value = counterd4;
+    valueInputd4.value = parseInt(valueInputd4.value) + 1;
   }
 }
 function decrement(ev) {
   ev.preventDefault();
   const id = ev.currentTarget.id;
-  if (id === 'buttonrestd100') {
-    counterd100 = counterd100 - 1;
-    valueInputd100.value = counterd100;
-  } else if (id === 'buttonrestd20') {
-    counterd20 = counterd20 - 1;
-    valueInputd20.value = counterd20;
-  } else if (id === 'buttonrestd12') {
-    counterd12 = counterd12 - 1;
-    valueInputd12.value = counterd12;
-  } else if (id === 'buttonrestd10') {
-    counterd10 = counterd10 - 1;
-    valueInputd10.value = counterd10;
-  } else if (id === 'buttonrestd8') {
-    counterd8 = counterd8 - 1;
-    valueInputd8.value = counterd8;
-  } else if (id === 'buttonrestd6') {
-    counterd6 = counterd6 - 1;
-    valueInputd6.value = counterd6;
+  if (id === 'buttonrestd100' && parseInt(valueInputd100.value) > 0) {
+    valueInputd100.value = parseInt(valueInputd100.value) - 1;
+  } else if (id === 'buttonrestd20' && parseInt(valueInputd20.value) > 0) {
+    valueInputd20.value = parseInt(valueInputd20.value) - 1;
+  } else if (id === 'buttonrestd12' && parseInt(valueInputd12.value) > 0) {
+    valueInputd12.value = parseInt(valueInputd12.value) - 1;
+  } else if (id === 'buttonrestd10' && parseInt(valueInputd10.value) > 0) {
+    valueInputd10.value = parseInt(valueInputd10.value) - 1;
+  } else if (id === 'buttonrestd8' && parseInt(valueInputd8.value) > 0) {
+    valueInputd8.value = parseInt(valueInputd8.value) - 1;
+  } else if (id === 'buttonrestd6' && parseInt(valueInputd6.value) > 0) {
+    valueInputd6.value = parseInt(valueInputd6.value) - 1;
   } else {
-    counterd4 = counterd4 + 1;
-    valueInputd4.value = counterd4;
+    valueInputd4.value = parseInt(valueInputd4.value) - 1;
   }
 
 }
