@@ -12,7 +12,6 @@ const valueInputd6 = document.querySelector('#inputd6');
 const valueInputd4 = document.querySelector('#inputd4');
 
 
-
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
