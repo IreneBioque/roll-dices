@@ -10,6 +10,16 @@ const valueInputd10 = document.querySelector('#inputd10');
 const valueInputd8 = document.querySelector('#inputd8');
 const valueInputd6 = document.querySelector('#inputd6');
 const valueInputd4 = document.querySelector('#inputd4');
+const valueInputd100Save = document.querySelector('.js_inputsaved100');
+const valueInputd20Save = document.querySelector('.js_inputsaved20');
+const valueInputd12Save = document.querySelector('.js_inputsaved12');
+const valueInputd10Save = document.querySelector('.js_inputsaved10');
+const valueInputd8Save = document.querySelector('.js_inputsaved8');
+const valueInputd6Save = document.querySelector('.js_inputsaved6');
+const valueInputd4Save = document.querySelector('.js_inputsaved4');
+
+const favoritesSave = document.querySelector('.js_favoritesdice');
+
 
 
 function getRandomNumber(max) {
@@ -26,8 +36,8 @@ function handleRoll(number, faces) {
 
 
 function handleRolld100() {
-
-  if (valueInputd100.value !== '') {
+  //debugger;
+  if (valueInputd100.value !== '0') {
     const resultsAll = handleRoll(valueInputd100.value, 100);
     let resultsd100 = document.createElement('p');
     let suma = 0;
@@ -36,11 +46,20 @@ function handleRolld100() {
       resultsd100.innerHTML = `Tiraste ${valueInputd100.value} dados d100, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd100);
+  } else if (valueInputd100Save.value !== '0') {
+    const resultsAllSave = handleRoll(valueInputd100Save.value, 100);
+    let resultsd100 = document.createElement('p');
+    let suma = 0;
+    for (const result of resultsAllSave) {
+      suma += parseInt(result);
+      resultsd100.innerHTML = `Tiraste ${valueInputd100Save.value} dados d100, los resultados son ${resultsAllSave} El total es ${suma} `;
+    }
+    favoritesSave.appendChild(resultsd100);
   }
 }
 
 function handleRolld20() {
-  if (valueInputd20.value !== '') {
+  if (valueInputd20.value !== '0') {
     const resultsAll = handleRoll(valueInputd20.value, 20);
     let resultsd20 = document.createElement('p');
     let suma = 0;
@@ -49,6 +68,15 @@ function handleRolld20() {
       resultsd20.innerHTML = `Tiraste ${valueInputd20.value} dados d20, los resultados son ${resultsAll} El total es ${suma} `;
     }
     showResults.appendChild(resultsd20);
+  } else if (valueInputd20Save.value !== '0') {
+    const resultsAllSave = handleRoll(valueInputd20Save.value, 20);
+    let resultsd20 = document.createElement('p');
+    let suma = 0;
+    for (const result of resultsAllSave) {
+      suma += parseInt(result);
+      resultsd20.innerHTML = `Tiraste ${valueInputd20Save.value} dados d20, los resultados son ${resultsAllSave} El total es ${suma} `;
+    }
+    favoritesSave.appendChild(resultsd20);
   }
 }
 function handleRolld12() {
@@ -133,16 +161,20 @@ console.log(selects);
 
 const inputsSave = document.querySelectorAll('.js_inputsave');
 const nameSave = document.querySelector('.js_nameSave');
-const favoritesSave = document.querySelector('.js_favoritesdice');
+
 const buttonSavePrint = document.querySelector('.js_savebutton');
 
 
 function renderFacorites() {
-  const title = nameSave.value;
-  console.log(title)
-  favoritesSave.innerHTML = '';
+  let html = document.createElement('ul');
+  let title = document.createElement('h3');
+  let button = document.createElement('button');
+  button.innerHTML = 'Roll';
+  const titleFav = nameSave.value;
+  title.innerHTML = titleFav;
   for (let select of selects) {
-    favoritesSave.innerHTML += `<li><label for="">
+    if (select.value !== '') {
+      html.innerHTML += `<li><label for="">
                 <i class="fas fa-dice-d20 js_liDice"></i>
                 <input
                   class="js_inputsave"
@@ -152,11 +184,19 @@ function renderFacorites() {
                   value=${select.value}
                 />
               </label></li>`;
-
-
-
+    }
   }
+  favoritesSave.appendChild(title);
+  favoritesSave.appendChild(html);
+  favoritesSave.appendChild(button);
+  selects.splice(0);
+  button.classList.add('js_buttonfavorite');
+  for (const b of button) {
+    b.addEventListener('click', renderRoll);
+  }
+
 }
+
 
 for (const inputSave of inputsSave) {
   inputSave.addEventListener('change', handleInputSave);
