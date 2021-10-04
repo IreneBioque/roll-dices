@@ -15,18 +15,23 @@ function paintFavorites(arrayFavorites) {
   const titleFav = nameSave.value;
   title.innerHTML = titleFav;
   for (let favorites of arrayFavorites) {
-    console.log(favorites.values);
-    if (favorites.values !== '') {
-      html.innerHTML += `<li><label for="">
-                 <i class="fas fa-dice-d20 js_liDice"></i>
-                 <input
-                   class="js_inputsave"
-                   type="number"
-                   name=""
-                   value=${parseInt(favorites.values)}
-                 />
-               </label></li>`;
+    for (const fav of favorites.values) {
+      console.log(parseInt(fav));
+      // html.innerHTML += `<h3>${favorites.name}</h3>`;
+      if (favorites.values !== '') {
+        html.innerHTML += `<li><label for="">
+                   <i class="fas fa-dice-d20 js_liDice"></i>
+                   <input
+                     class="js_inputsave"
+                     type="number"
+                     name=""
+                     value=${parseInt(fav)}
+                   />
+                 </label></li>`;
+      }
     }
+    console.log(favorites.values);
+
     favoritesSave.appendChild(title);
     favoritesSave.appendChild(html);
     favoritesSave.appendChild(button);
@@ -36,6 +41,10 @@ function paintFavorites(arrayFavorites) {
     handleSelectSave();
   }
 }
+
+const buttonPrueba = document.querySelector('.js_buttonfavorite');
+console.log(buttonPrueba);
+// buttonPrueba.addEventListener('click', renderRollSave);
 for (const inputSave of inputsSave) {
   inputSave.addEventListener('change', handleInputChange);
 }
