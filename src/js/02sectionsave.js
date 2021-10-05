@@ -7,12 +7,14 @@ const inputsSave = document.querySelectorAll('.js_inputsave');
 const nameSave = document.querySelector('.js_nameSave');
 
 const buttonSavePrint = document.querySelector('.js_savebutton');
+
 function paintFavorites(arrayFavorites) {
   let html = document.createElement('ul');
   let title = document.createElement('h3');
   let button = document.createElement('button');
   button.innerHTML = 'Roll';
   for (let favorites of arrayFavorites) {
+    console.log(arrayFavorites.map((i) => i.values));
     for (const value of favorites.values) {
       for (const clas of favorites.classes) {
         const titleFav = favorites.name;
@@ -30,6 +32,7 @@ function paintFavorites(arrayFavorites) {
         }
       }
     }
+
     favoritesSave.appendChild(title);
     favoritesSave.appendChild(html);
     favoritesSave.appendChild(button);
@@ -57,7 +60,6 @@ function handleInputChange(ev) {
     id: ev.currentTarget.id,
     value: ev.currentTarget.value,
   });
-  console.log(selects);
 }
 
 function onSave() {
