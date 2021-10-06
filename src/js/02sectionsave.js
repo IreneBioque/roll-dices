@@ -9,27 +9,25 @@ const nameSave = document.querySelector('.js_nameSave');
 const buttonSavePrint = document.querySelector('.js_savebutton');
 
 function paintFavorites(arrayFavorites) {
-  let html = document.createElement('ul');
-  let title = document.createElement('h3');
-  let button = document.createElement('button');
-  button.innerHTML = 'Roll';
+  console.log(arrayFavorites);
   for (let favorites of arrayFavorites) {
-    console.log(arrayFavorites.map((i) => i.values));
-    for (const value of favorites.values) {
-      for (const clas of favorites.classes) {
-        const titleFav = favorites.name;
-        title.innerHTML = titleFav;
-        if (favorites.values !== '') {
-          html.innerHTML += `<li><label for="">
+    let html = document.createElement('ul');
+    let title = document.createElement('h3');
+    let button = document.createElement('button');
+    button.innerHTML = 'Roll';
+    for (const dice of favorites.dices) {
+      const titleFav = favorites.name;
+      title.innerHTML = titleFav;
+      if (favorites.values !== '') {
+        html.innerHTML += `<li><label for="">
                    <i class="fas fa-dice-d20 js_liDice"></i>
                    <input
-                     class=${clas}
+                     class=${dice.class}
                      type="number"
                      name=""
-                     value=${parseInt(value)}
+                     value=${parseInt(dice.value)}
                    />
                  </label></li>`;
-        }
       }
     }
 
@@ -66,11 +64,17 @@ function onSave() {
   const roll = {
     name: selects[0].name,
     id: selects[0].name,
-    classes: selects.map((select) => select.id),
-    values: selects
-      .map((select) => select.value)
-      .filter((value) => value !== '' && value !== undefined),
+    dices: [],
   };
+  selects.forEach((select) => {
+    const dice = {
+      class: select.id,
+      value: select.value,
+    };
+    if (dice.value !== '' && dice.value !== undefined) {
+      roll.dices.push(dice);
+    }
+  });
   setInLocalStorage(roll);
   paintFavorites([roll]);
 }

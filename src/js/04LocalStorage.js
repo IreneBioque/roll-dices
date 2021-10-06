@@ -1,7 +1,6 @@
 'use strict';
 
 function setInLocalStorage(roll) {
-  console.log(roll);
   let rollArray = [];
   const localStorageShows = localStorage.getItem('rollArray');
   if (localStorageShows !== null) {

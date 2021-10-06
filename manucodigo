@@ -1,0 +1,16 @@
+var numeroDeDadosLanzados = 99;
+var numeroDeRepeticionesSegunLosDadosQueHemosLanzado = 99;
+
+do {
+
+    LA FUNCION QUE HACE COSAS CHINGONAS
+
+    ...
+
+    numeroDeRepeticionesSegunLosDadosQueHemosLanzado++;
+
+} while (numeroDeRepeticionesSegunLosDadosQueHemosLanzado < numeroDeDadosLanzados);
+
+while () {
+    
+}
