@@ -18,7 +18,6 @@ function paintFavorites(arrayFavorites) {
     parrafo.classList.add(`${favorites.name}`);
     button.classList.add('js_buttonfavorite');
     button.setAttribute('id', favorites.name);
-    div.setAttribute('id', favorites.name);
     button.innerHTML = 'Roll';
     for (const dice of favorites.dices) {
       const titleFav = favorites.name;
