@@ -9,11 +9,16 @@ const nameSave = document.querySelector('.js_nameSave');
 const buttonSavePrint = document.querySelector('.js_savebutton');
 
 function paintFavorites(arrayFavorites) {
-  console.log(arrayFavorites);
   for (let favorites of arrayFavorites) {
+    let div = document.createElement('div');
     let html = document.createElement('ul');
     let title = document.createElement('h3');
+    let parrafo = document.createElement('p');
     let button = document.createElement('button');
+    parrafo.classList.add('js_parrafofavorite');
+    button.classList.add('js_buttonfavorite');
+    button.setAttribute('id', favorites.name);
+    div.setAttribute('id', favorites.name);
     button.innerHTML = 'Roll';
     for (const dice of favorites.dices) {
       const titleFav = favorites.name;
@@ -24,18 +29,18 @@ function paintFavorites(arrayFavorites) {
                    <input
                      class=${dice.class}
                      type="number"
-                     name=""
+                     name=${favorites.name}
                      value=${parseInt(dice.value)}
                    />
                  </label></li>`;
       }
     }
+    favoritesSave.appendChild(div);
+    div.appendChild(title);
+    div.appendChild(html);
+    div.appendChild(parrafo);
+    div.appendChild(button);
 
-    favoritesSave.appendChild(title);
-    favoritesSave.appendChild(html);
-    favoritesSave.appendChild(button);
-    button.classList.add('js_buttonfavorite');
-    button.setAttribute('id', favorites.name);
     selects = [];
   }
   listenRoll();

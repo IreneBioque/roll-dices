@@ -1,11 +1,13 @@
 'use strict';
 
 const favoritesSave = document.querySelector('.js_favoritesdice');
-
-function handleRolld100Save() {
+const parrafoFavorite = document.querySelectorAll('js_parrafofavorite');
+console.log(parrafoFavorite);
+function handleRolld100Save(ev) {
   const valueInputd100Save = document.querySelectorAll('.js_inputsaved100');
+  console.log(ev.currentTarget.id);
   for (const valued100 of valueInputd100Save) {
-    if (valued100.value !== '0') {
+    if (valued100.value !== '0' && ev.currentTarget.id === valued100.name) {
       const resultsAllSave = handleRoll(valued100.value, 100);
       let resultsd100 = document.createElement('p');
       let suma = 0;
@@ -17,10 +19,10 @@ function handleRolld100Save() {
     }
   }
 }
-function handleRolld20Save() {
+function handleRolld20Save(ev) {
   const valueInputd20Save = document.querySelectorAll('.js_inputsaved20');
   for (const valued20 of valueInputd20Save) {
-    if (valued20.value !== '0') {
+    if (valued20.value !== '0' && ev.currentTarget.id === valued20.name) {
       const resultsAllSave = handleRoll(valued20.value, 20);
       let resultsd20 = document.createElement('p');
       let suma = 0;
@@ -32,10 +34,10 @@ function handleRolld20Save() {
     }
   }
 }
-function handleRolld12Save() {
+function handleRolld12Save(ev) {
   const valueInputd12Save = document.querySelectorAll('.js_inputsaved12');
   for (const valued12 of valueInputd12Save) {
-    if (valued12.value !== '0') {
+    if (valued12.value !== '0' && ev.currentTarget.id === valued12.name) {
       const resultsAllSave = handleRoll(valued12.value, 12);
       let resultsd12 = document.createElement('p');
       let suma = 0;
@@ -47,10 +49,10 @@ function handleRolld12Save() {
     }
   }
 }
-function handleRolld10Save() {
+function handleRolld10Save(ev) {
   const valueInputd10Save = document.querySelectorAll('.js_inputsaved10');
   for (const valued10 of valueInputd10Save) {
-    if (valued10.value !== '0') {
+    if (valued10.value !== '0' && ev.currentTarget.id === valued10.name) {
       const resultsAllSave = handleRoll(valued10.value, 10);
       let resultsd10 = document.createElement('p');
       let suma = 0;
@@ -62,10 +64,10 @@ function handleRolld10Save() {
     }
   }
 }
-function handleRolld8Save() {
+function handleRolld8Save(ev) {
   const valueInputd8Save = document.querySelectorAll('.js_inputsaved8');
   for (const valued8 of valueInputd8Save) {
-    if (valued8.value !== '0') {
+    if (valued8.value !== '0' && ev.currentTarget.id === valued8.name) {
       const resultsAllSave = handleRoll(valued8.value, 8);
       let resultsd8 = document.createElement('p');
       let suma = 0;
@@ -78,10 +80,10 @@ function handleRolld8Save() {
   }
 }
 
-function handleRolld6Save() {
+function handleRolld6Save(ev) {
   const valueInputd6Save = document.querySelectorAll('.js_inputsaved6');
   for (const valued6 of valueInputd6Save) {
-    if (valued6.value !== '0') {
+    if (valued6.value !== '0' && ev.currentTarget.id === valued6.name) {
       const resultsAllSave = handleRoll(valued6.value, 6);
       let resultsd6 = document.createElement('p');
       let suma = 0;
@@ -93,10 +95,10 @@ function handleRolld6Save() {
     }
   }
 }
-function handleRolld4Save() {
+function handleRolld4Save(ev) {
   const valueInputd4Save = document.querySelectorAll('.js_inputsaved4');
   for (const valued4 of valueInputd4Save) {
-    if (valued4.value !== '0') {
+    if (valued4.value !== '0' && ev.currentTarget.id === valued4.name) {
       const resultsAllSave = handleRoll(valued4.value, 4);
       let resultsd4 = document.createElement('p');
       let suma = 0;
@@ -109,12 +111,12 @@ function handleRolld4Save() {
   }
 }
 
-function renderRollSave() {
-  handleRolld100Save();
-  handleRolld20Save();
-  handleRolld12Save();
-  handleRolld10Save();
-  handleRolld8Save();
-  handleRolld6Save();
-  handleRolld4Save();
+function renderRollSave(ev) {
+  handleRolld100Save(ev);
+  handleRolld20Save(ev);
+  handleRolld12Save(ev);
+  handleRolld10Save(ev);
+  handleRolld8Save(ev);
+  handleRolld6Save(ev);
+  handleRolld4Save(ev);
 }
