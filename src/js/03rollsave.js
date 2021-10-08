@@ -1,8 +1,7 @@
 'use strict';
 
 const favoritesSave = document.querySelector('.js_favoritesdice');
-const parrafoFavorite = document.querySelectorAll('js_parrafofavorite');
-console.log(parrafoFavorite);
+
 function handleRolld100Save(ev) {
   const valueInputd100Save = document.querySelectorAll('.js_inputsaved100');
   console.log(ev.currentTarget.id);

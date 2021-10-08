@@ -15,7 +15,7 @@ function paintFavorites(arrayFavorites) {
     let title = document.createElement('h3');
     let parrafo = document.createElement('p');
     let button = document.createElement('button');
-    parrafo.classList.add('js_parrafofavorite');
+    parrafo.classList.add(`${favorites.name}`);
     button.classList.add('js_buttonfavorite');
     button.setAttribute('id', favorites.name);
     div.setAttribute('id', favorites.name);

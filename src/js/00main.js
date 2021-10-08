@@ -22,7 +22,6 @@ function handleRoll(number, faces) {
 }
 
 function handleRolld100() {
-  //debugger;
   if (valueInputd100.value !== '0') {
     const resultsAll = handleRoll(valueInputd100.value, 100);
     let resultsd100 = document.createElement('p');
