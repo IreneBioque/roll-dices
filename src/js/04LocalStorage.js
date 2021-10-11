@@ -1,7 +1,7 @@
 'use strict';
+let rollArray = [];
 
 function setInLocalStorage(roll) {
-  let rollArray = [];
   const localStorageShows = localStorage.getItem('rollArray');
   if (localStorageShows !== null) {
     const arrayFavorites = JSON.parse(localStorageShows);
@@ -9,7 +9,6 @@ function setInLocalStorage(roll) {
   } else {
     rollArray = [roll];
   }
-  console.log(rollArray);
   // the object is converted into a string
   const stringFavorites = JSON.stringify(rollArray);
   // Save the array and the string locally

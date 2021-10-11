@@ -9,19 +9,20 @@ const nameSave = document.querySelector('.js_nameSave');
 const buttonSavePrint = document.querySelector('.js_savebutton');
 
 function paintFavorites(arrayFavorites) {
+  console.log('Este es arrayFavorites', arrayFavorites);
   for (let favorites of arrayFavorites) {
     let div = document.createElement('div');
     let html = document.createElement('ul');
     let title = document.createElement('h3');
-    let parrafo = document.createElement('p');
     let button = document.createElement('button');
-    parrafo.classList.add(`${favorites.name}`);
     button.classList.add('js_buttonfavorite');
     button.setAttribute('id', favorites.name);
+    div.setAttribute('id', `div_${favorites.name}`);
     button.innerHTML = 'Roll';
     for (const dice of favorites.dices) {
       const titleFav = favorites.name;
       title.innerHTML = titleFav;
+      title.innerHTML += `<i class="fas fa-times-circle js_deleted lifavorite__deleted" data-id="${favorites.name}">`;
       if (favorites.values !== '') {
         html.innerHTML += `<li><label for="">
                    <i class="fas fa-dice-d20 js_liDice"></i>
@@ -31,18 +32,19 @@ function paintFavorites(arrayFavorites) {
                      name=${favorites.name}
                      value=${parseInt(dice.value)}
                    />
+                   
                  </label></li>`;
       }
     }
     favoritesSave.appendChild(div);
     div.appendChild(title);
     div.appendChild(html);
-    div.appendChild(parrafo);
     div.appendChild(button);
 
     selects = [];
   }
   listenRoll();
+  listenCloses();
   handleSelectSave();
 }
 
@@ -64,8 +66,10 @@ function handleInputChange(ev) {
   });
 }
 
+let roll;
+
 function onSave() {
-  const roll = {
+  roll = {
     name: selects[0].name,
     id: selects[0].name,
     dices: [],
