@@ -5,6 +5,7 @@ let selects = [];
 
 const inputsSave = document.querySelectorAll('.js_inputsave');
 const nameSave = document.querySelector('.js_nameSave');
+const buttonPlusSavedp = document.querySelectorAll('.jsbuttonplusSaved');
 
 const buttonSavePrint = document.querySelector('.js_savebutton');
 
@@ -36,6 +37,7 @@ function paintFavorites(arrayFavorites) {
                  </label></li>`;
       }
     }
+
     favoritesSave.appendChild(div);
     div.appendChild(title);
     div.appendChild(html);
@@ -57,8 +59,12 @@ function listenRoll() {
 
 for (const inputSave of inputsSave) {
   inputSave.addEventListener('change', handleInputChange);
+  //inputSave.addEventListener('click', handleInputChange);
 }
+
 function handleInputChange(ev) {
+  console.log(nameSave.value);
+  console.log(ev.currentTarget.value);
   selects.push({
     name: nameSave.value,
     id: ev.currentTarget.id,
@@ -70,7 +76,9 @@ let roll;
 
 function onSave() {
   roll = {
-    name: selects[0].name,
+    name: selects.map((select) => {
+      return select.name;
+    }),
     id: selects[0].name,
     dices: [],
   };
@@ -79,13 +87,16 @@ function onSave() {
       class: select.id,
       value: select.value,
     };
-    if (dice.value !== '' && dice.value !== undefined) {
+    if (dice.value !== 0 && dice.value !== undefined) {
       roll.dices.push(dice);
     }
   });
+  console.log('Esto es select name', selects[0].name);
+  console.log('Esto es roll', roll);
   setInLocalStorage(roll);
   paintFavorites([roll]);
 }
+
 function handleSelectSave() {
   save.classList.toggle('hidden');
 }
