@@ -1,0 +1,50 @@
+@import url(//db.onlinewebfonts.com/c/2eba1e44ff150d867122736d358c496f?family=Draconis);
+
+.main__landing {
+  background-image: url(../images/recortado.jpg);
+  background-size: cover;
+  background-color: black;
+  width: 100%;
+  font-family: 'Draconis';
+  font-size: 18px;
+  @media all and (min-width: 768px) {
+    background-image: url(../images/wp4325574.jpg);
+    background-position: center;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 25px;
+  }
+  &--section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    @media all and (min-width: 768px) {
+      margin-right: 35px;
+    }
+  }
+}
+
+.landing_button {
+  background-image: url(../images/boton.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  width: 193px;
+  height: 56px;
+  border: none;
+  transform: scale(70%);
+  margin-top: 19px;
+  font-family: 'Draconis';
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.text__button:link,
+.text__button:visited,
+.text__button:active {
+  text-decoration: none;
+  color: white;
+}
