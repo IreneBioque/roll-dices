@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titulo</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/adcd08db79.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <include
+      class_header="header__dices"
+      src="./partials/header.html"
+    ></include>
+    <main>
+      <h1 class="title">Tira tus dados</h1>
+      <form action="">
+        <ul>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd100"
+              />
+              <button class="js_buttonplus" id="buttonplusd100">+</button>
+              <button class="js_buttonrest" id="buttonrestd100">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd20"
+              />
+              <button class="js_buttonplus" id="buttonplusd20">+</button>
+              <button class="js_buttonrest" id="buttonrestd20">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd12"
+              />
+              <button class="js_buttonplus" id="buttonplusd12">+</button>
+              <button class="js_buttonrest" id="buttonrestd12">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd10"
+              />
+              <button class="js_buttonplus" id="buttonplusd10">+</button>
+              <button class="js_buttonrest" id="buttonrestd10">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd8"
+              />
+              <button class="js_buttonplus" id="buttonplusd8">+</button>
+              <button class="js_buttonrest" id="buttonrestd8">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-six js_liDice" id="6"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd6"
+              />
+              <button class="js_buttonplus" id="buttonplusd6">+</button>
+              <button class="js_buttonrest" id="buttonrestd6">-</button>
+            </label>
+          </li>
+          <li>
+            <label for="">
+              <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+              <input
+                value="0"
+                class="js_inputd100"
+                type="number"
+                name=""
+                id="inputd4"
+              />
+              <button class="js_buttonplus" id="buttonplusd4">+</button>
+              <button class="js_buttonrest" id="buttonrestd4">-</button>
+            </label>
+          </li>
+        </ul>
+        <button class="js_button">Roll the dice!</button>
+        <p class="js_results"></p>
+      </form>
+      <section>
+        <h2>Guardar tiradas</h2>
+        <button class="js_buttonSave">Abrir guardar tirada</button>
+        <div class="js_save hidden">
+          <ul class="js_savelist">
+            <li>
+              <label for="">
+                <input
+                  type="text"
+                  placeholder="Nombre de tu tirada"
+                  class="js_nameSave"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+                <input
+                  class="js_inputsave js_inputsaved100"
+                  type="number"
+                  name=""
+                  id="js_inputsaved100"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd100Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd100Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved20"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd20Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd20Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved12"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd12Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd12Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved10"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd10Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd10Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved8"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd8Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd8Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-six js_liDice" id="6"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved6"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd6Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd6Saved">
+                  -
+                </button>
+              </label>
+            </li>
+            <li>
+              <label for="">
+                <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+                <input
+                  class="js_inputsave"
+                  type="number"
+                  name=""
+                  id="js_inputsaved4"
+                  value="0"
+                />
+                <button class="js_buttonplusSaved" id="buttonplusd4Saved">
+                  +
+                </button>
+                <button class="js_buttonrestSaved" id="buttonrestd4Saved">
+                  -
+                </button>
+              </label>
+            </li>
+          </ul>
+          <button class="js_savebutton">Guardar</button>
+        </div>
+      </section>
+      <section class="js_favoritesdice"></section>
+      <div class="js_prueba"></div>
+    </main>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
