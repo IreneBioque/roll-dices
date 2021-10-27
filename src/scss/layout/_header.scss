@@ -1,0 +1,32 @@
+@import url(//db.onlinewebfonts.com/c/0470db67835b095dc41cd5d94db0b22a?family=Dragon+FREE);
+.header {
+  width: 100%;
+  display: flex;
+  color: white;
+  font-family: 'Dragon FREE';
+  text-transform: uppercase;
+
+  .logo {
+    width: 75px;
+    height: 43px;
+  }
+  &__index {
+    position: absolute;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    @media all and (min-width: 768px) {
+      padding-right: 60px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 55px;
+    }
+  }
+  &__dices {
+    justify-content: flex-start;
+    font-size: 20px;
+    padding-top: 20px;
+    background-color: black;
+  }
+}
