@@ -1,19 +1,25 @@
-<h2>Guardar tiradas</h2>
-<button class="js_buttonSave">Abrir guardar tirada</button>
-<div class="js_save hidden">
+<h2 class="titleSavedRoll">Guardar tiradas</h2>
+<button class="js_buttonSave buttonSaveRoll">Abrir guardar tirada</button>
+<div class="js_save hidden savedRoll">
   <ul class="js_savelist">
     <li>
-      <label for="">
+      <label for="nameRoll" class="savedRoll__labelText">
+        Pon nombre a tu tirada
         <input
           type="text"
           placeholder="Nombre de tu tirada"
           class="js_nameSave"
+          name="nameRoll"
         />
       </label>
     </li>
     <li>
       <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+        <div>
+          <span>Dado de 100 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="100"></i>
+        </div>
+        
         <input
           class="js_inputsave js_inputsaved100"
           type="number"
@@ -30,12 +36,15 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+      <label for="d20saved">
+        <div>
+          <span>Dado de 20 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="20"></i>
+        </div>
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d20saved"
           id="js_inputsaved20"
           value="0"
         />
@@ -48,12 +57,16 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+      <label for="d12saved">
+        <div>
+          <span>Dado de 12 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="12"></i>
+        </div>
+      
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d12saved"
           id="js_inputsaved12"
           value="0"
         />
@@ -66,12 +79,15 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+      <label for="d10saved">
+        <div>
+          <span>Dado de 10 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="10"></i>
+        </div>
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d10saved"
           id="js_inputsaved10"
           value="0"
         />
@@ -84,12 +100,15 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+      <label for="d8saved">
+        <div>
+          <span>Dado de 8 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="8"></i>
+        </div>
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d8saved"
           id="js_inputsaved8"
           value="0"
         />
@@ -102,12 +121,15 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-six js_liDice" id="6"></i>
+      <label for="d6saved">
+        <div>
+          <span>Dado de 6 caras</span>
+          <i class="fas fa-dice-six js_liDice" id="6"></i>
+        </div>
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d6saved"
           id="js_inputsaved6"
           value="0"
         />
@@ -120,12 +142,15 @@
       </label>
     </li>
     <li>
-      <label for="">
-        <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+      <label for="d4saved">
+        <div>
+          <span>Dado de 4 caras</span>
+          <i class="fas fa-dice-d20 js_liDice" id="4"></i>
+        </div>
         <input
           class="js_inputsave"
           type="number"
-          name=""
+          name="d4saved"
           id="js_inputsaved4"
           value="0"
         />
@@ -138,8 +163,8 @@
       </label>
     </li>
   </ul>
-  <button class="js_savebutton">Guardar</button>
+  <button class="js_savebutton savedRoll__buttonSave">Guardar</button>
 </div>
 </section>
-<section class="js_favoritesdice"></section>
+<section class="js_favoritesdice savedRoll__favorite"></section>
 <div class="savedRollSection"></div>
