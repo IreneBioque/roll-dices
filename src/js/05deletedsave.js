@@ -3,18 +3,17 @@
 function handleClose(ev) {
   console.log(ev.currentTarget.dataset.id);
   const selectedRoll = ev.currentTarget.dataset.id;
-  const Prueba = localStorage.getItem('rollArray');
-  const arrayFavoritesPrueba = JSON.parse(Prueba);
-  const favoritesFound = arrayFavoritesPrueba.findIndex((fav) => {
+  const arrayls = localStorage.getItem('rollArray');
+  const arrayFavorites = JSON.parse(arrayls);
+  const favoritesFound = arrayFavorites.findIndex((fav) => {
     return fav.id === selectedRoll;
   });
-  console.log(arrayFavoritesPrueba);
+  console.log(arrayFavorites);
   console.log(favoritesFound);
   if (favoritesFound !== -1) {
-    arrayFavoritesPrueba.splice(favoritesFound, 1);
-    console.log('Esto es variable prueba', arrayFavoritesPrueba);
-    const stringFavoritesPrueba = JSON.stringify(arrayFavoritesPrueba);
-    localStorage.setItem('rollArray', stringFavoritesPrueba);
+    arrayFavorites.splice(favoritesFound, 1);
+    const stringFavorites = JSON.stringify(arrayFavorites);
+    localStorage.setItem('rollArray', stringFavorites);
     const div = document.getElementById(`div_${selectedRoll}`);
     div.remove();
   }
