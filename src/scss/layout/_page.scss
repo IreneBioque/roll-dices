@@ -1,10 +1,31 @@
-.hidden {
-  display: none;
+.title {
+  text-align: center;
+  padding: 10px;
 }
+
 .main {
+  background-color: black;
+  color: white;
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   &__label {
     display: flex;
     flex-direction: column;
     margin: 20px;
   }
+  &__results {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 20px 5px;
+  }
+  &__buttonRoll {
+    grid-column: span 2;
+    width: 100px;
+    margin: auto;
+  }
+}
+.divname {
+  padding: 5px 0;
 }

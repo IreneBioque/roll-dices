@@ -1,0 +1,42 @@
+.titleSavedRoll {
+  text-align: center;
+  margin: 10px;
+}
+.buttonSaveRoll {
+  margin: 10px;
+}
+
+.savedRoll {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  &__labelText {
+    display: flex;
+    flex-direction: column;
+  }
+  &__buttonSave {
+    margin: 10px;
+  }
+  &__favorite {
+    &--div {
+      border: solid 5px red;
+      border-radius: 15px;
+      margin: 10px 10px 0 10px;
+    }
+    &--title {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px;
+    }
+    &--ul {
+      margin: 5px;
+    }
+    &--button {
+      margin: 5px;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
