@@ -1,7 +1,7 @@
 'use strict';
 
 const favoritesSave = document.querySelector('.js_favoritesdice');
-const prueba = document.querySelector('.js_prueba');
+const savedRoll = document.querySelector('.savedRollSection');
 
 function handleRolld100Save(ev) {
   const valueInputd100Save = document.querySelectorAll('.js_inputsaved100');
@@ -17,7 +17,7 @@ function handleRolld100Save(ev) {
       }
     }
   }
-  prueba.appendChild(resultsd100);
+  savedRoll.appendChild(resultsd100);
 }
 function handleRolld20Save(ev) {
   const valueInputd20Save = document.querySelectorAll('.js_inputsaved20');
@@ -33,7 +33,7 @@ function handleRolld20Save(ev) {
       }
     }
   }
-  prueba.appendChild(resultsd20);
+  savedRoll.appendChild(resultsd20);
 }
 function handleRolld12Save(ev) {
   const valueInputd12Save = document.querySelectorAll('.js_inputsaved12');
@@ -46,7 +46,7 @@ function handleRolld12Save(ev) {
         suma += parseInt(result);
         resultsd12.innerHTML = `Tiraste ${valued12.value} dados d12, los resultados son ${resultsAllSave} El total es ${suma} `;
       }
-      prueba.appendChild(resultsd12);
+      savedRoll.appendChild(resultsd12);
     }
   }
 }
@@ -61,7 +61,7 @@ function handleRolld10Save(ev) {
         suma += parseInt(result);
         resultsd10.innerHTML = `Tiraste ${valued10.value} dados d10, los resultados son ${resultsAllSave} El total es ${suma} `;
       }
-      prueba.appendChild(resultsd10);
+      savedRoll.appendChild(resultsd10);
     }
   }
 }
@@ -76,7 +76,7 @@ function handleRolld8Save(ev) {
         suma += parseInt(result);
         resultsd8.innerHTML = `Tiraste ${valued8.value} dados d8, los resultados son ${resultsAllSave} El total es ${suma} `;
       }
-      prueba.appendChild(resultsd8);
+      savedRoll.appendChild(resultsd8);
     }
   }
 }
@@ -92,7 +92,7 @@ function handleRolld6Save(ev) {
         suma += parseInt(result);
         resultsd6.innerHTML = `Tiraste ${valued6.value} dados d6, los resultados son ${resultsAllSave} El total es ${suma} `;
       }
-      prueba.appendChild(resultsd6);
+      savedRoll.appendChild(resultsd6);
     }
   }
 }
@@ -107,13 +107,13 @@ function handleRolld4Save(ev) {
         suma += parseInt(result);
         resultsd4.innerHTML = `Tiraste ${valued4.value} dados d4, los resultados son ${resultsAllSave} El total es ${suma} `;
       }
-      prueba.appendChild(resultsd4);
+      savedRoll.appendChild(resultsd4);
     }
   }
 }
 
 function renderRollSave(ev) {
-  prueba.innerHTML = '';
+  savedRoll.innerHTML = '';
   handleRolld100Save(ev);
   handleRolld20Save(ev);
   handleRolld12Save(ev);
