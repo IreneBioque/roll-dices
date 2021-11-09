@@ -21,20 +21,20 @@ function paintFavorites(arrayFavorites) {
     let button = document.createElement('button');
     button.classList.add('js_buttonfavorite');
     button.classList.add('savedRoll__favorite--button');
-    button.setAttribute('id', favorites.name);
-    div.setAttribute('id', `div_${favorites.name}`);
+    button.setAttribute('id', favorites.name[0]);
+    div.setAttribute('id', `div_${favorites.name[0]}`);
     button.innerHTML = 'Roll';
     for (const dice of favorites.dices) {
-      const titleFav = favorites.name;
+      const titleFav = favorites.name[0];
       title.innerHTML = titleFav;
-      title.innerHTML += `<i class="fas fa-times-circle js_deleted lifavorite__deleted" data-id="${favorites.name}">`;
+      title.innerHTML += `<i class="fas fa-times-circle js_deleted lifavorite__deleted" data-id="${favorites.name[0]}">`;
       if (favorites.values !== '') {
         html.innerHTML += `<li><label for="">
                    <i class="fas fa-dice-d20 js_liDice"></i>
                    <input
                      class=${dice.class}
                      type="number"
-                     name=${favorites.name}
+                     name=${favorites.name[0]}
                      value=${parseInt(dice.value)}
                    />
                    
@@ -103,6 +103,15 @@ function onSave() {
 
 function handleSelectSave() {
   save.classList.toggle('hidden');
+  nameSave.value = '';
+  document.querySelector('.js_inputsaved100').value = 0;
+
+  document.querySelector('#js_inputsaved20').value = 0;
+  document.querySelector('#js_inputsaved12').value = 0;
+  document.querySelector('#js_inputsaved10').value = 0;
+  document.querySelector('#js_inputsaved8').value = 0;
+  document.querySelector('#js_inputsaved6').value = 0;
+  document.querySelector('#js_inputsaved4').value = 0;
 }
 buttonSave.addEventListener('click', handleSelectSave);
 buttonSavePrint.addEventListener('click', onSave);
