@@ -13,10 +13,14 @@ function paintFavorites(arrayFavorites) {
   console.log('Este es arrayFavorites', arrayFavorites);
   for (let favorites of arrayFavorites) {
     let div = document.createElement('div');
+    div.classList.add('savedRoll__favorite--div');
     let html = document.createElement('ul');
+    html.classList.add('savedRoll__favorite--ul');
     let title = document.createElement('h3');
+    title.classList.add('savedRoll__favorite--title');
     let button = document.createElement('button');
     button.classList.add('js_buttonfavorite');
+    button.classList.add('savedRoll__favorite--button');
     button.setAttribute('id', favorites.name);
     div.setAttribute('id', `div_${favorites.name}`);
     button.innerHTML = 'Roll';
